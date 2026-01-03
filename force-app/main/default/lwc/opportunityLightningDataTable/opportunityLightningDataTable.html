@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title="Lightning Data Table">
+    <lightning-button
+      label="Delete"
+      variant="destructive"
+      onclick={handleClick}
+    ></lightning-button>
+    <lightning-datatable
+      key-field="Id"
+      data={oppList}
+      columns={oppColumns}
+      max-row-selection="1"
+      onrowselection={handleRowSelection}
+    ></lightning-datatable>
+  </lightning-card>
+</template>

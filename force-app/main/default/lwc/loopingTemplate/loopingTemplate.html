@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Array" class="slds-m-around_medium">
+    <template for:each={cricketers} for:item="cricketer">
+      <ul key={cricketer}>
+        <li>{cricketer}</li>
+      </ul>
+    </template>
+  </lightning-card>
+  <lightning-card title="Array of objects" class="slds-m-around_medium">
+    <template for:each={teamDetail} for:item="detail">
+      <ul key={detail.id}>
+        <li><b>{detail.name}</b></li>
+        <li class="team-name">{detail.team}</li>
+      </ul>
+    </template>
+  </lightning-card>
+</template>

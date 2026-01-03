@@ -1,0 +1,29 @@
+<template>
+  <lightning-card title="Positions">
+    <table
+      class="slds-m-around_medium slds-table slds-table_bordered"
+      style="width: 95%"
+    >
+      <thead>
+        <tr>
+          <th>Position Name</th>
+          <th>Date Opened</th>
+          <th>Date Closed</th>
+          <th>Department</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template for:each={positionsList.data} for:item="pos">
+          <tr key={pos.Id}>
+            <td>{pos.Name}</td>
+            <td>{pos.Date_Opened__c}</td>
+            <td>{pos.Date_Closed__c}</td>
+            <td>{pos.Department__c}</td>
+            <td>{pos.Location__c}</td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </lightning-card>
+</template>

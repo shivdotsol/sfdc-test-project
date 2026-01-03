@@ -1,0 +1,53 @@
+<template>
+  <lightning-card title="Opportunities with Imperetive Apex">
+    <div class="slds-p-around_medium">
+      <lightning-button
+        label="Won Rec"
+        variant="success"
+        onclick={loadWonRec}
+      ></lightning-button>
+      <lightning-button
+        label="Lost Rec"
+        variant="destructive"
+        onclick={loadLostRec}
+      ></lightning-button>
+    </div>
+    <table
+      class="slds-table slds-table_cell-buffer slds-table_bordered"
+      aria-label="Example default base table of Opportunities"
+    >
+      <thead>
+        <tr class="slds-line-height_reset">
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Opportunity Name">
+              Opportunity Name
+            </div>
+          </th>
+
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Close Date">Close Date</div>
+          </th>
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Stage">Stage</div>
+          </th>
+
+          <th class="" scope="col">
+            <div class="slds-truncate" title="Amount">Amount</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <template lwc:if={oppList}>
+          <template for:each={oppList} for:item="opp">
+            <tr key={opp.Id}>
+              <td>{opp.Name}</td>
+              <td>{opp.CloseDate}</td>
+              <td>{opp.StageName}</td>
+              <td>{opp.Amount}</td>
+            </tr>
+          </template>
+        </template>
+      </tbody>
+    </table>
+  </lightning-card>
+</template>

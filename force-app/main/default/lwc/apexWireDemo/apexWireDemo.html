@@ -1,0 +1,26 @@
+<template>
+  <lightning-card title="APEX Wire Property" class="slds-p-around_medium">
+    <table
+      class="slds-table slds-table_bordered slds-m-around_medium slds-table_col-bordered"
+    >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Industry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template lwc:if={accounts.data}>
+          <template for:each={accounts.data} for:item="account">
+            <tr key={account.Id}>
+              <td>{account.Name}</td>
+              <td>{account.Type}</td>
+              <td>{account.Industry}</td>
+            </tr>
+          </template>
+        </template>
+      </tbody>
+    </table>
+  </lightning-card>
+</template>

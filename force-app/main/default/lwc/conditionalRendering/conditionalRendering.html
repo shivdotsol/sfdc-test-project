@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Conditional Rendering" class="slds-m-around_medium">
+      <div class="slds-m-around_medium" >
+        <lightning-button variant="brand" label="Button" title="Primary action" class="slds-m-left_x-small" onclick={handleClick}></lightning-button>
+      </div>
+      <template lwc:if={isVisible} >
+        <div class="slds-m-around_medium" >Welcome to SF-LWC</div>
+      </template>
+      <template lwc:else >
+        <div class="slds-m-around_medium" >Click the button.</div>
+      </template>
+
+      <lightning-input type="text" label="type hello to see data" onchange={handleChange}></lightning-input>
+      <template lwc:if={isTextHello}>
+        <div>Correct text entered. Good.</div>
+      </template>
+      <template lwc:else>
+        <div>type hello only.</div>
+      </template>
+    </lightning-card>
+</template>

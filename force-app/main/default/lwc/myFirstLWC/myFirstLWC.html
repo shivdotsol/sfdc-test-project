@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Card" variant="base" class="slds-m-around_medium">
+      <div class="slds-m-around_medium">
+      
+    <lightning-input type="text" label="Enter some text" onchange={handleChange}></lightning-input>
+    <p>My course name is {course} and title is {title}</p></div>
+    </lightning-card>
+    <lightning-card title="Card 2" variant="base" class="slds-m-around_medium">
+      <div class="slds-m-around_medium">
+      
+    <lightning-input type="text" label="Enter base location" onchange={handleCityChange}></lightning-input>
+    <p>My name is {user.name} and my base location is {user.city}</p></div>
+    </lightning-card>
+
+    <lightning-card>
+      <div class="slds-m-around_medium">{num1} * {num2} = {multiply}</div>
+    </lightning-card>
+
+    <lightning-card title="Card 2" variant="base" class="slds-m-around_medium">
+      <div class="slds-m-around_medium">
+    <p>{cricketers}</p></div>
+    </lightning-card>
+</template>

@@ -1,0 +1,40 @@
+<template>
+  <lightning-card title="Calculator" class="slds-m-around_medium">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        label="Enter 1st num"
+        type="text"
+        onchange={handleNum1}
+        class="slds-m-around_medium"
+        value={num1}
+      ></lightning-input>
+      <lightning-input
+        label="Enter 2nd num"
+        type="text"
+        onchange={handleNum2}
+        class="slds-m-around_medium"
+        value={num2}
+      ></lightning-input>
+      <lightning-textarea
+        class="slds-m-around_medium"
+        label="Result"
+        value={result}
+      ></lightning-textarea>
+    </div>
+    <div class="slds-m-around_medium">
+      <lightning-button label="Addition" onclick={handleSum}></lightning-button>
+      <lightning-button
+        label="Difference"
+        onclick={handleDifference}
+      ></lightning-button>
+      <lightning-button
+        label="Product"
+        onclick={handleProduct}
+      ></lightning-button>
+      <lightning-button
+        label="Division"
+        onclick={handleDivision}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

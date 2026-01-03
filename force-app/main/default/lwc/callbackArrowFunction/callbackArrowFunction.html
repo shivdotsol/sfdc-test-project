@@ -1,0 +1,32 @@
+<template>
+  <lightning-card title="Callback vs Arrow">
+    <div class="slds-p-around_medium">
+      <p><strong>{currentTime}</strong></p>
+    </div>
+    <div class="slds-p-around_medium sldg-grid slds-gutters">
+      <lightning-button
+        class="slds-m-around_medium"
+        label="Refresh using arrow"
+        onclick={refreshUsingArrow}
+      ></lightning-button>
+
+      <lightning-button
+        class="slds-m-around_medium"
+        label="Refresh using bind"
+        onclick={refreshUsingBind}
+      ></lightning-button>
+
+      <lightning-button
+        class="slds-m-around_medium"
+        label="Refresh using local variable"
+        onclick={refreshUsingLocalVariable}
+      ></lightning-button>
+
+      <lightning-button
+        class="slds-m-around_medium"
+        label="Refresh normal"
+        onclick={refreshUsingNormalCallback}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>
