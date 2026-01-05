@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Account Detail">
+    <template lwc:if={account}>
+      <div class="slds-m-around_medium">
+        <p><b>Name:</b>{account.Name}</p>
+        <p><b>AnnualRevenue:</b>{account.AnnualRevenue}</p>
+        <p><b>Industry:</b>{account.Industry}</p>
+      </div>
+    </template>
+  </lightning-card>
+</template>
