@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Parent Component">
+    <div class="slds-m-around_medium">
+      <p>
+        <b>Parent received: {message}</b>
+      </p>
+      <c-child-component onchildmessage={handleMessage}></c-child-component>
+    </div>
+  </lightning-card>
+</template>
