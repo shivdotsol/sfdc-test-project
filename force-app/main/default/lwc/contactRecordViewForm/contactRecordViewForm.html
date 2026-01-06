@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Contact Record View Form">
+    <div class="slds-m-around_medium">
+      <lightning-record-view-form
+        record-id={recordId}
+        object-api-name="Contact"
+      >
+        <lightning-output-field field-name="FirstName"></lightning-output-field>
+        <lightning-output-field field-name="LastName"></lightning-output-field>
+        <lightning-output-field field-name="Phone"></lightning-output-field>
+        <lightning-output-field field-name="Email"></lightning-output-field>
+      </lightning-record-view-form>
+    </div>
+  </lightning-card>
+</template>
