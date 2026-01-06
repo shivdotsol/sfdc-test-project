@@ -1,0 +1,47 @@
+<template>
+  <lightning-card title="Account Detail">
+    <template lwc:if={candidate}>
+      <div class="slds-m-around_medium">
+        <div class="slds-text-align_right">
+          <lightning-button
+            label="view"
+            onclick={handleView}
+            class="slds-m-right_x-small"
+          ></lightning-button>
+          <lightning-button
+            label="edit"
+            onclick={handleEdit}
+            class="slds-m-right_x-small"
+          ></lightning-button>
+        </div>
+
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">First Name:</b>{candidate.First_Name__c}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Last Name:</b>{candidate.First_Name__c}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Email:</b>{candidate.Email__c}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Mobile:</b>{candidate.Phone__c}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Street:</b>{candidate.Street__c}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">State/Province:</b
+          >{candidate.State_Province__c}
+        </p>
+      </div>
+
+      <c-candidate-map
+        city={candidate.City__c}
+        state={candidate.State_Province__c}
+        country={candidate.Country__c}
+        street={candidate.Street__c}
+      ></c-candidate-map>
+    </template>
+  </lightning-card>
+</template>
