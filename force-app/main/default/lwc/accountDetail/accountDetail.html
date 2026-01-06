@@ -2,10 +2,48 @@
   <lightning-card title="Account Detail">
     <template lwc:if={account}>
       <div class="slds-m-around_medium">
-        <p><b>Name:</b>{account.Name}</p>
-        <p><b>AnnualRevenue:</b>{account.AnnualRevenue}</p>
-        <p><b>Industry:</b>{account.Industry}</p>
+        <div class="slds-text-align_right">
+          <lightning-button
+            label="view"
+            onclick={handleView}
+            class="slds-m-right_x-small"
+          ></lightning-button>
+          <lightning-button
+            label="edit"
+            onclick={handleEdit}
+            class="slds-m-right_x-small"
+          ></lightning-button>
+        </div>
+
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Name:</b>{account.Name}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">AnnualRevenue:</b
+          >{account.AnnualRevenue}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">Industry:</b>{account.Industry}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">BillingCity:</b>{account.BillingCity}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">BillingState:</b>{account.BillingState}
+        </p>
+        <p class="slds-m-around_small">
+          <b class="slds-m-right_small">BillingCountry:</b
+          >{account.BillingCountry}
+        </p>
       </div>
+
+      <c-account-map
+        city={account.BillingCity}
+        state={account.BillingState}
+        country={account.BillingCountry}
+        street={account.BillingStreet}
+        postal-code={account.BillingPostalCode}
+      ></c-account-map>
     </template>
   </lightning-card>
 </template>
