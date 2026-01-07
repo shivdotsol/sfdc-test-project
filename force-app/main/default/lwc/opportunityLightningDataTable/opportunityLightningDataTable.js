@@ -19,8 +19,10 @@ export default class OpportunityLightningDataTable extends LightningElement {
   @wire(getAllOpportunities)
   opportunity(result) {
     this.wiredOppResult = result;
+    // console.log(result);
     if (result.data) {
-      this.oppList = result;
+      this.oppList = result.data;
+      // console.log(this.oppList);
     }
   }
 
