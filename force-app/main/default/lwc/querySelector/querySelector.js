@@ -1,10 +1,22 @@
 import { LightningElement } from "lwc";
 
 export default class QuerySelector extends LightningElement {
-  enteredName;
+  message;
 
   handleClick() {
-    const inputElement = this.template.querySelector(".input");
-    this.enteredName = inputElement.value;
+    const inputs = this.template.querySelectorAll(".input");
+    let allFields = true;
+
+    inputs.forEach((inp) => {
+      if (!inp.value) {
+        allFields = false;
+      }
+    });
+
+    if (allFields) {
+      this.message = "All fields are filled.";
+    } else {
+      this.message = "Please fill all the fields";
+    }
   }
 }

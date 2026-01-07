@@ -1,12 +1,15 @@
 <template>
   <lightning-card title="Query Selector">
     <div class="slds-m-around_medium">
-      <lightning-input label="Name" class="input"></lightning-input>
+      <lightning-input label="First Name" class="input"></lightning-input>
+      <lightning-input label="Last Name" class="input"></lightning-input>
+      <lightning-input label="Email" class="input"></lightning-input>
       <lightning-button
         label="Show Name"
         onclick={handleClick}
+        class="slds-m-around_medium"
       ></lightning-button>
-      <div class="slds-m-around_medium">{enteredName}</div>
+      <div class="slds-m-around_medium">{message}</div>
     </div>
   </lightning-card>
 </template>
